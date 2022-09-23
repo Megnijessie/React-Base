@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
-
+import Navbar from './composer/Navbar';
+import Formulaire from './composer/Formulaire';
+import ArticleList from './composer/ArticleList';
+ 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+  const [nom,setNom]=useState('');
+  const [desc, setDesc]=useState('');
+  
+
+  return (   
+        <div>
+            <Navbar/>
+            <ArticleList/>
+            {/* <Formulaire/> */}
+        </div>  
   );
 }
 
