@@ -1,6 +1,6 @@
 
 
-function ArticleList({articles}) {
+function ArticleList({articles, handleDelete}) {
 
     return(
         <div>
@@ -20,7 +20,9 @@ function ArticleList({articles}) {
                         <td>
                             <button className="bg-primary px-3 py-2 rounded-3 border-0" > Details</button>
                             <button className="bg-success px-3 py-2 mx-3 rounded-3 border-0" > Modifier</button>
-                            <button className="bg-danger px-3 py-2 rounded-3 border-0">  Supprimer </button>                                
+                            <button className="bg-danger px-3 py-2 rounded-3 border-0" onClick={()=>handleDelete(article.id)}> 
+                                Supprimer
+                            </button>                                
                         </td>
                     </tr>
 ))}

@@ -28,11 +28,16 @@ function Home(){
         })
     }, []);
 
+    const handleDelete= (id)=>{
+        const newList= articles.filter((article)=>article.id !== id);
+        setArticles(newList);
+    }
+
     return ( 
         <div>
             {error && <div>{error}</div>}
             {isLoading && <div>En cours de chargement.... </div>}
-            <ArticleList articles={articles} />
+            <ArticleList articles={articles} handleDelete={handleDelete} />
         </div>
      );
 }
