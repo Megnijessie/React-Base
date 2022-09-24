@@ -1,5 +1,4 @@
 import Navbar from './composer/Navbar';
-// import Formulaire from './composer/Formulaire';
 import Home from './composer/Home';
  
 function App() {
@@ -7,7 +6,6 @@ function App() {
         <div>
             <Navbar/>
             <Home/>
-            {/* <Formulaire/> */}
         </div>  
   );
 }
