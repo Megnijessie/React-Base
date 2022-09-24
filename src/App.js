@@ -1,19 +1,12 @@
-import { useState } from 'react';
-import './App.css';
 import Navbar from './composer/Navbar';
-import Formulaire from './composer/Formulaire';
-import ArticleList from './composer/ArticleList';
+// import Formulaire from './composer/Formulaire';
+import Home from './composer/Home';
  
 function App() {
-
-  const [nom,setNom]=useState('');
-  const [desc, setDesc]=useState('');
-  
-
   return (   
         <div>
             <Navbar/>
-            <ArticleList/>
+            <Home/>
             {/* <Formulaire/> */}
         </div>  
   );

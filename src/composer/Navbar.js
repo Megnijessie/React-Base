@@ -1,15 +1,15 @@
 
 
-
 function Navbar() {
+    
     return(
         <div>
-            <nav class="navbar navbar-light bg-primary">
-                <div class="container-fluid">
-                    <a class="navbar-brand">Navbar</a>
-                    <form class="d-flex">
-
-                    <a href="" class="btn border-light btn-outline-success text-light">Creer un article</a>
+            <nav className="navbar navbar-light bg-primary">
+                <div className="container-fluid">
+                    <a className="navbar-brand">Navbar</a>
+                    <form className="d-flex">
+                    <a href="" className="btn border-light btn-outline-success text-light mx-5" > Accueil</a>
+                    <a href="" className="btn border-light btn-outline-success text-light">Creer un article</a>
                     </form>
                 </div>
             </nav>
