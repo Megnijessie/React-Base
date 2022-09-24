@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 function ArticleList({articles, handleDelete}) {
 
@@ -18,11 +18,11 @@ function ArticleList({articles, handleDelete}) {
                         <th scope="row">{article.id}</th>
                         <td>{article.title}</td>
                         <td>
-                            <button className="bg-primary px-3 py-2 rounded-3 border-0" > Details</button>
+                            <Link to={'/detail/'+article.id} className="bg-primary px-3 py-2 rounded-3 border-0" style={{ textDecoration:'none' }} > Details</Link>
                             <button className="bg-success px-3 py-2 mx-3 rounded-3 border-0" > Modifier</button>
-                            <button className="bg-danger px-3 py-2 rounded-3 border-0" onClick={()=>handleDelete(article.id)}> 
+                            {/* <button className="bg-danger px-3 py-2 rounded-3 border-0" onClick={()=>handleDelete(article.id)}> 
                                 Supprimer
-                            </button>                                
+                            </button>                                 */}
                         </td>
                     </tr>
 ))}

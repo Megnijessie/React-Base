@@ -9,12 +9,7 @@ function Home(){
 
     useEffect(()=>{
         fetch('https://jsonplaceholder.typicode.com/posts')
-        .then((response)=>{
-            if (!response.ok) {
-                throw Error('Desole une erreur est survenue...');
-            }
-            return response.json();
-        })
+        .then((response)=>response.json())
         .then((data)=>{
             console.log(data);
             setArticles(data);
@@ -26,7 +21,7 @@ function Home(){
             setError(err.message);
             setIsLoading(false);
         })
-    }, []);
+    });
 
     const handleDelete= (id)=>{
         const newList= articles.filter((article)=>article.id !== id);
